@@ -1,0 +1,28 @@
+name: Run XSpec Tests
+
+on: [push, pull_request]
+
+jobs:
+  xspec-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+
+    - name: Install Saxon and XSpec
+      run: |
+        wget https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.6/Saxon-HE-10.6.jar -O saxon-he.jar
+        git clone https://github.com/xspec/xspec.git
+        cd xspec
+        ./bin/xspec.sh -h
+
+    - name: Run XSpec tests
+      run: |
+        cd xspec
+        ./bin/xspec.sh ../path/to/your/xslt/file.xspec
