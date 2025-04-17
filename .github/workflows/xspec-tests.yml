@@ -23,7 +23,7 @@ jobs:
         ./bin/xspec.sh -h
 
     - name: Set environment variables
-      run: |
+      run: |
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
 
