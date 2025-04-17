@@ -1,3 +1,4 @@
+---
 name: Run XSpec Tests
 
 on: [push, pull_request]
