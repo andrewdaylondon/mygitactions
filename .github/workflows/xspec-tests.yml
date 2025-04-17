@@ -22,7 +22,11 @@ jobs:
         cd xspec
         ./bin/xspec.sh -h
 
+    - name: Download XSpec file
+      run: |
+        wget https://github.com/andrewdaylondon/hello_world_py_test/main/hhc_to_taa.xspec -O ../hhc_to_taa.xspec
+
     - name: Run XSpec tests
       run: |
         cd xspec
-        ./bin/xspec.sh ../path/to/your/xslt/file.xspec
+        ./bin/xspec.sh ../hhc_to_taa.xspec
