@@ -22,6 +22,11 @@ jobs:
         cd xspec
         ./bin/xspec.sh -h
 
+    - name: Set environment variables
+      run: |
+        echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
+        echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
+      
     - name: Download XSpec file
       run: |
         wget https://github.com/andrewdaylondon/hello_world_py_test/blob/main/hhc_to_taa.xspec -O ../hhc_to_taa.xspec
