@@ -19,8 +19,6 @@ jobs:
       run: |
         wget https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.6/Saxon-HE-10.6.jar -O saxon-he.jar
         git clone https://github.com/xspec/xspec.git
-        cd xspec
-        ./bin/xspec.sh -h
 
     - name: Set environment variables
       run: |
@@ -29,5 +27,4 @@ jobs:
 
     - name: Run XSpec tests
       run: |
-        cd xspec
-        ./bin/xspec.sh ../hhc_to_taa.xspec
+        ./xspec/bin/xspec.sh hhc_to_taa.xspec
