@@ -33,14 +33,17 @@ jobs:
       run: |
         cd input-repo
         ls -la
+        echo "Contains *.xsl file"
         cd tests
         ls -la
+        echo "Contains *.xspec file"
 
     - name: Check xspec directory contents
       run: |
         cd xspec
         cd bin
         ls -la
+        echo "Contains xspec.sh file"
 
     - name: Run XSpec tests
       run: |    
