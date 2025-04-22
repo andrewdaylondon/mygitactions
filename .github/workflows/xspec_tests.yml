@@ -25,16 +25,14 @@ jobs:
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
 
-    - name: Display first 10 lines of README.md
+    
+    - name: Clone other repository
       run: |
-        head README.md
-
-    - name: Check directory contents
-      run: |
-        ls -la
+        git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
 
     - name: echo $GITHUB_WORKSPACE
       run: |
+        ls -la
         echo $GITHUB_WORKSPACE
 
     - name: Run XSpec tests
