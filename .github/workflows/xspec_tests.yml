@@ -30,6 +30,8 @@ jobs:
         ls -la
         cd xspec
         ls -la
+        cd bin
+        ls -la
 
     - name: Run XSpec tests
       run: |
