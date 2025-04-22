@@ -31,6 +31,10 @@ jobs:
       run: |
         wget https://github.com/andrewdaylondon/hello_world_py_test/blob/main/hhc_to_taa.xspec -O ../hhc_to_taa.xspec
 
+    - name: Directory check
+      run: |
+        src
+
     - name: Run XSpec tests
       run: |
         cd xspec
