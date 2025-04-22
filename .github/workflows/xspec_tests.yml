@@ -27,6 +27,7 @@ jobs:
 
     - name: Check directory contents
       run: |
+        cat README.md
         ls -la
         cd xspec
         ls -la
