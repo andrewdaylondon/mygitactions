@@ -28,6 +28,7 @@ jobs:
     - name: Verify XSpec file
       run: |
         ls -la hhc_to_taa.xspec
+        ls -la
 
     - name: Run XSpec tests
       run: |
