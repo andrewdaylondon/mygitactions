@@ -28,7 +28,9 @@ jobs:
     - name: Clone other repository
       run: |        
         git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xsl
-        mkdir tests git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
+        mkdir tests 
+        cd tests
+        git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
 
     - name: Check directory contents
       run: |
