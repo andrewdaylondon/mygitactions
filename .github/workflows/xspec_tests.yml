@@ -26,9 +26,9 @@ jobs:
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
     
     - name: Clone other repository
-      run: |
-        git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
+      run: |        
         git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xsl
+        mkdir tests git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
 
     - name: Check directory contents
       run: |
@@ -36,4 +36,4 @@ jobs:
 
     - name: Run XSpec tests
       run: |     
-        ./xspec/bin/xspec.sh hhc_to_taa.xspec hhc_to_taa.xsl
+        ./xspec/bin/xspec.sh tests/hhc_to_taa.xspec
