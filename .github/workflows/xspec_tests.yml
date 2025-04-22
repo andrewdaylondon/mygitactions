@@ -30,7 +30,7 @@ jobs:
         ls -la
         cd xspec
         ls -la
-        cd bin
+        cd src
         ls -la
 
     - name: Verify XSpec file
