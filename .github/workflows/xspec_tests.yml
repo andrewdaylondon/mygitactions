@@ -32,10 +32,17 @@ jobs:
         cd tests
         git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
 
-    - name: Check directory contents
+    - name: Check test directory contents
       run: |
         ls -la
         cd tests
+        ls -la
+
+    - name: Check xspec directory contents
+      run: |
+        cd xspec
+        ls -la
+        cd bin
         ls -la
 
     - name: Run XSpec tests
