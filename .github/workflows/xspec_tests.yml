@@ -33,8 +33,11 @@ jobs:
       run: |
         ls -la
 
-    - name: Run XSpec tests
+    - name: echo $GITHUB_WORKSPACE
       run: |
         echo $GITHUB_WORKSPACE
+
+    - name: Run XSpec tests
+      run: |        
         cd $GITHUB_WORKSPACE
         ./xspec/bin/xspec.sh hhc_to_taa.xspec
