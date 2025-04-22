@@ -27,11 +27,7 @@ jobs:
 
     - name: Dir chk
       run: |
-        ls -la
-        cd xspec
-        ls -la
-        cd bin
-        ls -la
+        cd ../
 
     - name: Run XSpec tests
       run: |
