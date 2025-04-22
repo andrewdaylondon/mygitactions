@@ -28,6 +28,7 @@ jobs:
     - name: Clone other repository
       run: |
         git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
+        git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xsl
 
     - name: Check directory contents
       run: |
@@ -35,4 +36,4 @@ jobs:
 
     - name: Run XSpec tests
       run: |     
-        ./xspec/bin/xspec.sh hhc_to_taa.xspec
+        ./xspec/bin/xspec.sh hhc_to_taa.xspec hhc_to_taa.xsl
