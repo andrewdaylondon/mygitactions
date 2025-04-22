@@ -25,10 +25,13 @@ jobs:
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
 
+    - name: Display first 10 lines of README.md
+      run: |
+        head README.md
+
     - name: Check directory contents
       run: |
         ls -la
-        head README.md
 
     - name: Run XSpec tests
       run: |
