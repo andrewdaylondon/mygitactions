@@ -1,4 +1,4 @@
-loname: Run XSpec Tests
+name: Run XSpec Tests
 
 on: [push, pull_request]
 
@@ -24,16 +24,10 @@ jobs:
       run: |
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
-
     
     - name: Clone other repository
       run: |
         git clone https://github.com/andrewdaylondon/hello_world_py_test.git hhc_to_taa.xspec
-
-    - name: echo $GITHUB_WORKSPACE
-      run: |
-        ls -la
-        echo $GITHUB_WORKSPACE
 
     - name: Run XSpec tests
       run: |     
