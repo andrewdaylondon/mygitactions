@@ -32,6 +32,8 @@ jobs:
     - name: Check directory contents
       run: |
         ls -la
+        cd ../../
+        ls -la
 
     - name: Run XSpec tests
       run: |     
