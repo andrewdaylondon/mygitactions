@@ -25,14 +25,16 @@ jobs:
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
 
-    - name: Check directory contents
+    - name: Display README.md
       run: |
         cat README.md
+
+    - name: Check directory contents
+      run: |
         ls -la
         cd xspec
         ls -la
-        cd src
-        ls -la
+        cat README.md
 
     - name: Verify XSpec file
       run: |
