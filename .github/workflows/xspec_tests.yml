@@ -35,7 +35,10 @@ jobs:
     - name: Check directory contents
       run: |
         ls -la
+        cd tests
+        ls -la
 
     - name: Run XSpec tests
       run: |     
+        ls -la
         ./xspec/bin/xspec.sh ./tests/hhc_to_taa.xspec
