@@ -27,7 +27,7 @@ jobs:
 
     - name: Dir chk
       run: |
-        src
+        ls -la
 
     - name: Run XSpec tests
       run: |
