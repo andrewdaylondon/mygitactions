@@ -1,4 +1,4 @@
-name: Run XSpec Tests
+loname: Run XSpec Tests
 
 on: [push, pull_request]
 
@@ -37,4 +37,4 @@ jobs:
 
     - name: Run XSpec tests
       run: |     
-        ./xspec/bin/xspec.sh ../../hhc_to_taa.xspec
+        ./xspec/bin/xspec.sh hello_world_py_test/hhc_to_taa.xspec
