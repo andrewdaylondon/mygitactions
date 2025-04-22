@@ -31,6 +31,7 @@ jobs:
 
     - name: Check test directory contents
       run: |
+        cd input-repo
         ls -la
         cd tests
         ls -la
