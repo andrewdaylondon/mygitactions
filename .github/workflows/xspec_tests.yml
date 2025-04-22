@@ -28,8 +28,10 @@ jobs:
     - name: Check directory contents
       run: |
         ls -la
+        head README.md
 
     - name: Run XSpec tests
       run: |
+        echo $GITHUB_WORKSPACE
         cd $GITHUB_WORKSPACE
         ./xspec/bin/xspec.sh hhc_to_taa.xspec
