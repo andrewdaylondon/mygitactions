@@ -25,11 +25,11 @@ jobs:
         echo "SAXON_CP=$(pwd)/saxon-he.jar" >> $GITHUB_ENV
         echo "SAXON_HOME=$(pwd)/xspec" >> $GITHUB_ENV
 
-    - name: Verify XSpec file
+    - name: Check directory contents
       run: |
         ls -la
-        ls -la hhc_to_taa.xspec        
 
     - name: Run XSpec tests
       run: |
+        cd $GITHUB_WORKSPACE
         ./xspec/bin/xspec.sh hhc_to_taa.xspec
