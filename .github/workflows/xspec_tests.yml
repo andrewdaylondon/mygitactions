@@ -35,4 +35,4 @@ jobs:
 
     - name: Run XSpec tests
       run: |
-        ./xspec/bin/xspec.sh hhc_to_taa.xspec
+        ./xspec/bin/xspec.sh ../hhc_to_taa.xspec
