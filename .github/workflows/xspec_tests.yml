@@ -36,6 +36,5 @@ jobs:
         echo $GITHUB_WORKSPACE
 
     - name: Run XSpec tests
-      run: |        
-        cd $GITHUB_WORKSPACE
+      run: |     
         ./xspec/bin/xspec.sh hhc_to_taa.xspec
